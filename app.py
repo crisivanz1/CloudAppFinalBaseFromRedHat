@@ -14,13 +14,13 @@ def Default():
     increment5 = 5
     for i in range(1,101):
         if i % increment3 == 0 and i % increment5 == 0:
-            return(fizzbuzz)
+            return fizzbuzz
         elif i % increment3 == 0:
-            return(fizz)
+            return fizz
         elif i % increment5 == 0:
-            return(buzz)
+            return buzz
         else:
-            return(i)
+            return i
 
 if __name__ == '__main__':
     port = os.environ.get('FLASK_PORT') or 8080
