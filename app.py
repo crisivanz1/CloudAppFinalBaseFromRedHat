@@ -21,7 +21,7 @@ def Default():
         elif i % increment5 == 0:
             output += (buzz + ", ") 
         else:
-            output += (i + ", ")
+            output += (str(i) + ", ")
     return output
     
 Default()
