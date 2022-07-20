@@ -21,6 +21,8 @@ def Default():
         return buzz
     else:
         return i
+    
+Default()
 
 if __name__ == '__main__':
     port = os.environ.get('FLASK_PORT') or 8080
