@@ -6,13 +6,12 @@ app = Flask(__name__)
 @app.route('/')
 
 
-def Default():
+def Default(i):
     fizz = "Fizz"
     buzz = "Buzz"
     fizzbuzz = fizz + buzz
     increment3 = 3
     increment5 = 5
-    i = 0
     if i % increment3 == 0 and i % increment5 == 0:
         return fizzbuzz
     elif i % increment3 == 0:
@@ -22,7 +21,8 @@ def Default():
     else:
         return i
     
-Default()
+for i in range(1,101):
+    Default(i)
 
 if __name__ == '__main__':
     port = os.environ.get('FLASK_PORT') or 8080
