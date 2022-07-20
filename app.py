@@ -12,16 +12,17 @@ def Default():
     fizzbuzz = fizz + buzz
     increment3 = 3
     increment5 = 5
-    i = 0
-    if i % increment3 == 0 and i % increment5 == 0:
-        return fizzbuzz
-    elif i % increment3 == 0:
-        return fizz
-    elif i % increment5 == 0:
-        return buzz
-    else:
-        return i
-    
+    output = ""
+    for i in range(1,101):
+        if i % increment3 == 0 and i % increment5 == 0:
+            output += (fizzbuzz + ", ") 
+        elif i % increment3 == 0:
+            output += (fizz + ", ") 
+        elif i % increment5 == 0:
+            output += (buzz + ", ") 
+        else:
+            output += (i + ", ")
+    return output
     
 Default()
     
